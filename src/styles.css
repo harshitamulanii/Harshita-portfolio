@@ -1,0 +1,240 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant light (&:is(.light *));
+
+@theme inline {
+  --color-bg-primary:     var(--bg-primary);
+  --color-bg-secondary:   var(--bg-secondary);
+  --color-bg-card:        var(--bg-card);
+  --color-text-primary:   var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-accent-teal:    var(--accent-solid);
+  --color-accent-pink:    var(--accent-warm);
+  --color-border-soft:    var(--border-color);
+
+  --color-background:         var(--bg-primary);
+  --color-foreground:         var(--text-primary);
+  --color-primary:            var(--accent-solid);
+  --color-primary-foreground: #ffffff;
+  --color-muted-foreground:   var(--text-secondary);
+  --color-border:             var(--border-color);
+
+  --font-display: "Syne", sans-serif;
+  --font-sans:    "DM Sans", sans-serif;
+  --radius:       0.75rem;
+}
+
+/*
+ * ╔══════════════════════════════════════════════════╗
+ * ║  ARCTIC DAWN — Light (default)                   ║
+ * ║  Crisp icy background, sky-blue → indigo brand   ║
+ * ╚══════════════════════════════════════════════════╝
+ */
+:root {
+  --bg-primary:      #F4F7FA;
+  --bg-secondary:    #FFFFFF;
+  --bg-card:         rgba(255, 255, 255, 0.80);
+  --text-primary:    #0F172A;
+  --text-secondary:  #475569;
+  --accent-solid:    #3B82F6;
+  --accent-warm:     #6366F1;
+  --border-color:    #E2E8F0;
+  --shadow-card:     0 1px 3px rgba(15,23,42,0.06), 0 4px 16px rgba(59,130,246,0.08);
+  --shadow-hover:    0 8px 32px rgba(59,130,246,0.18), 0 2px 8px rgba(99,102,241,0.10);
+  --accent-gradient: linear-gradient(135deg, #38BDF8 0%, #3B82F6 50%, #6366F1 100%);
+  --gradient-subtle: linear-gradient(135deg,
+                       rgba(56,189,248,0.10) 0%,
+                       rgba(59,130,246,0.08) 50%,
+                       rgba(99,102,241,0.10) 100%);
+}
+
+/*
+ * ╔══════════════════════════════════════════════════╗
+ * ║  ARCTIC DAWN — Dark                              ║
+ * ║  Deep Arctic night, cool slate card surfaces     ║
+ * ╚══════════════════════════════════════════════════╝
+ */
+.light {
+  --bg-primary:      #0B0F19;
+  --bg-secondary:    #161E2F;
+  --bg-card:         rgba(22, 30, 47, 0.85);
+  --text-primary:    #E2E8F0;
+  --text-secondary:  #94A3B8;
+  --accent-solid:    #60A5FA;
+  --accent-warm:     #818CF8;
+  --border-color:    rgba(96, 165, 250, 0.15);
+  --shadow-card:     0 1px 3px rgba(0,0,0,0.30), 0 4px 16px rgba(96,165,250,0.08);
+  --shadow-hover:    0 8px 32px rgba(96,165,250,0.22), 0 2px 8px rgba(129,140,248,0.12);
+  --accent-gradient: linear-gradient(135deg, #38BDF8 0%, #60A5FA 50%, #818CF8 100%);
+  --gradient-subtle: linear-gradient(135deg,
+                       rgba(56,189,248,0.12) 0%,
+                       rgba(96,165,250,0.10) 50%,
+                       rgba(129,140,248,0.12) 100%);
+}
+
+html { scroll-behavior: smooth; }
+
+/* ── Base ───────────────────────────────────────────────────────────── */
+@layer base {
+  * { border-color: var(--border-color); }
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+/* ── Ambient mesh blobs (light) ─────────────────────────────────────── */
+body {
+  background-image:
+    radial-gradient(ellipse 70% 45% at 15%  0%,   rgba(56,189,248,0.12)  0%, transparent 65%),
+    radial-gradient(ellipse 55% 40% at 85%  5%,   rgba(99,102,241,0.09)  0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 50% 100%,  rgba(59,130,246,0.07)  0%, transparent 65%);
+}
+/* ── Ambient mesh blobs (dark) ──────────────────────────────────────── */
+.light body, .light {
+  background-image:
+    radial-gradient(ellipse 70% 45% at 15%  0%,   rgba(56,189,248,0.07)  0%, transparent 65%),
+    radial-gradient(ellipse 55% 40% at 85%  5%,   rgba(129,140,248,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 50% 100%,  rgba(96,165,250,0.05)  0%, transparent 65%);
+}
+
+/* ── Utilities ──────────────────────────────────────────────────────── */
+
+/* Gradient text — hero name & section accents */
+@utility text-aurora {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Gradient fill — buttons, rings, bars */
+@utility bg-aurora {
+  background: var(--accent-gradient);
+}
+
+/* Glassmorphism card */
+@utility glass-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+.glass-card:hover {
+  box-shadow: var(--shadow-hover);
+  border-color: color-mix(in srgb, var(--accent-solid) 40%, transparent);
+}
+
+/* Soft badge tint — skill badges & tech tags */
+@utility badge-accent {
+  background: rgba(59, 130, 246, 0.08);
+  color: #1D4ED8;
+  border: 1px solid rgba(59, 130, 246, 0.20);
+}
+.light .badge-accent {
+  background: rgba(96, 165, 250, 0.12);
+  color: #93C5FD;
+  border-color: rgba(96, 165, 250, 0.25);
+}
+
+/* Utility kept for any remaining neon-teal references */
+@utility neon-teal {
+  color: var(--accent-solid);
+}
+@utility neon-pink {
+  color: var(--accent-warm);
+}
+
+/* ── Animations ─────────────────────────────────────────────────────── */
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+@keyframes shimmer {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes aurora-ripple {
+  0%   { background-position: 0%   50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0%   50%; }
+}
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0  8px rgba(59,130,246,0.30), 0 0 20px rgba(59,130,246,0.12); }
+  50%       { box-shadow: 0 0 18px rgba(59,130,246,0.60), 0 0 40px rgba(99,102,241,0.20); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px);   }
+  50%       { transform: translateY(-6px);  }
+}
+
+.animate-spin-slow  { animation: spin-slow  10s linear         infinite; }
+.animate-fade-up    { animation: fade-up     0.7s ease-out both;         }
+.animate-pulse-glow { animation: pulse-glow  3s ease-in-out   infinite;  }
+.animate-float      { animation: float       4s ease-in-out   infinite;  }
+
+/* Gradient ring (hero photo) */
+.aurora-ring {
+  background: var(--accent-gradient);
+  background-size: 200% 200%;
+  animation: aurora-ripple 5s ease infinite;
+}
+
+/* ── Shimmer button ─────────────────────────────────────────────────── */
+.shimmer-btn { position: relative; overflow: hidden; }
+.shimmer-btn::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.28) 50%, transparent 70%);
+  transform: translateX(-100%);
+}
+.shimmer-btn:hover::after { animation: shimmer 0.8s ease-out; }
+
+/* ── Primary CTA button ─────────────────────────────────────────────── */
+.btn-primary {
+  background: var(--accent-gradient);
+  color: #fff;
+  border: none;
+  box-shadow: 0 2px 12px rgba(59,130,246,0.30);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(59,130,246,0.45), 0 2px 8px rgba(99,102,241,0.20);
+}
+
+/* ── Outlined CTA button ────────────────────────────────────────────── */
+.btn-outline {
+  border: 2px solid #3B82F6;
+  color: #2563EB;
+  background: transparent;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-outline:hover {
+  background: rgba(59,130,246,0.06);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(59,130,246,0.15);
+}
+.light .btn-outline {
+  border-color: #60A5FA;
+  color: #93C5FD;
+}
+.light .btn-outline:hover {
+  background: rgba(96,165,250,0.08);
+}
+
+/* ── Neon-btn alias kept for back-compat ────────────────────────────── */
+.neon-btn { /* no-op — replaced by btn-primary / btn-outline */ }
