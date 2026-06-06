@@ -1,5 +1,6 @@
 import { ArrowRight, Download, Github, Linkedin, Mail, Phone } from "lucide-react";
 import { motion } from "framer-motion";
+import harshitaImg from "../assets/harshita.png";
 
 const fade = (delay: number) => ({
   initial: { opacity: 0, y: 20 },
@@ -101,7 +102,7 @@ export function Hero() {
               }}
             >
               <img
-                src="/harshita.png"
+                src={harshitaImg}
                 alt="Harshita Mulani"
                 className="relative z-10 h-full w-full object-cover"
                 onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = "none"; }}
