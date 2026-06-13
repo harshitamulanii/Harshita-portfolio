@@ -61,8 +61,8 @@ export function Hero() {
           {/* Social icons */}
           <motion.div {...fade(0.75)} className="mt-8 flex gap-3">
             {[
-              { Icon: Github,   href: "https://github.com/harshitamulani",          label: "GitHub"   },
-              { Icon: Linkedin, href: "https://linkedin.com/in/harshitamulani",     label: "LinkedIn" },
+              { Icon: Github,   href: "https://github.com/harshitamulani2005-stack",          label: "GitHub"   },
+              { Icon: Linkedin, href: "https://linkedin.com/in/harshita-mulani-984077333",     label: "LinkedIn" },
               { Icon: Mail,     href: "mailto:harshitamulani2005@gmail.com",        label: "Email"    },
               { Icon: Phone,    href: "tel:+917987755286",                          label: "Phone"    },
             ].map(({ Icon, href, label }) => (
