@@ -6,7 +6,7 @@ const info = [
   { icon: "🏫", label: "School",    value: "St. Aloysius Sr. Sec. School (PCM, 2024)"      },
   { icon: "📧", label: "Email",     value: "harshitamulani2005@gmail.com"                  },
   { icon: "📞", label: "Phone",     value: "+91-7987755286"                                },
-  { icon: "🌐", label: "GitHub",    value: "https://github.com/harshitamulani2005-stack"                    },
+  { icon: "🌐", label: "GitHub",    value: "https://github.com/harshitamulanii"                    },
   { icon: "💼", label: "LinkedIn",  value: "https://linkedin.com/in/harshita-mulani-984077333"               },
   { icon: "🗣️", label: "Languages", value: "English, Hindi"                               },
 ];

@@ -8,22 +8,22 @@ const projects = [
     description:
       "A modern and responsive portfolio to showcase my skills, projects, certifications, and achievements. Focused on clean UI/UX, interactivity, and performance.",
     tech: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/harshitamulani2005-stack",
-    demo: "#",
+    github: "https://github.com/harshitamulanii/Harshita-portfolio",
+    demo: "https://harshitamulanii.github.io/Harshita-portfolio/",
   },
   {
     title: "Net-Banking Pro",
     description:
       "A banking management application for handling account operations and transaction management, built with OOP principles in Java.",
     tech: ["Java", "JSwing", "AWS", "MySQL"],
-    github: "https://github.com/harshitamulani2005-stack",
+    github: "https://github.com/harshitamulanii",
   },
   {
     title: "Smart Study-Buddy Chatbot",
     description:
       "An AI-based study assistant chatbot to support students with learning guidance. Focused on accessibility, usability, and smooth UX.",
     tech: ["HTML", "CSS", "AI Tools"],
-    github: "https://github.com/harshitamulani2005-stack",
+    github: "https://github.com/harshitamulanii",
   },
 ];
 
