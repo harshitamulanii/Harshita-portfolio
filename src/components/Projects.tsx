@@ -19,10 +19,10 @@ const projects = [
     github: "https://github.com/harshitamulanii",
   },
   {
-    title: "Smart Study-Buddy Chatbot",
-    description:
-      "An AI-based study assistant chatbot to support students with learning guidance. Focused on accessibility, usability, and smooth UX.",
-    tech: ["HTML", "CSS", "AI Tools"],
+    title: "Smart Ticketing AI Agent System",
+description:
+  "An AI-powered ticket management system that automates ticket assignment, generates helpful notes, matches moderator skills, updates ticket status, and sends notifications using Google Gemini AI, Inngest, and Nodemailer.",
+tech: ["Node.js", "Express.js", "MongoDB", "Google Gemini AI", "Inngest", "Nodemailer", "React", "Vite"],
     github: "https://github.com/harshitamulanii",
   },
 ];
