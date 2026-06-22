@@ -22,7 +22,10 @@ export default function App() {
   return (
     <div className="relative min-h-screen overflow-x-hidden bg-bg-primary text-text-primary">
       <StarBackground />
-      <Navbar theme={theme} onToggleTheme={() => setTheme((t) => (t === "dark" ? "light" : "dark"))} />
+      <Navbar
+        theme={theme}
+        onToggleTheme={() => setTheme((t) => (t === "dark" ? "light" : "dark"))}
+      />
       <SocialSidebar />
       <main>
         <Hero />

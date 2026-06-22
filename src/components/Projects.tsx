@@ -20,9 +20,18 @@ const projects = [
   },
   {
     title: "Smart Ticketing AI Agent System",
-description:
-  "An AI-powered ticket management system that automates ticket assignment, generates helpful notes, matches moderator skills, updates ticket status, and sends notifications using Google Gemini AI, Inngest, and Nodemailer.",
-tech: ["Node.js", "Express.js", "MongoDB", "Google Gemini AI", "Inngest", "Nodemailer", "React", "Vite"],
+    description:
+      "An AI-powered ticket management system that automates ticket assignment, generates helpful notes, matches moderator skills, updates ticket status, and sends notifications using Google Gemini AI, Inngest, and Nodemailer.",
+    tech: [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Google Gemini AI",
+      "Inngest",
+      "Nodemailer",
+      "React",
+      "Vite",
+    ],
     github: "https://github.com/harshitamulanii",
   },
 ];

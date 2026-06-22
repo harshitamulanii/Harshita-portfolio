@@ -2,9 +2,9 @@ import { Github, Linkedin, Mail } from "lucide-react";
 
 export function SocialSidebar() {
   const items = [
-    { icon: Github,   href: "https://github.com/harshitamulanii",      label: "GitHub"   },
+    { icon: Github, href: "https://github.com/harshitamulanii", label: "GitHub" },
     { icon: Linkedin, href: "https://linkedin.com/in/harshitamulani", label: "LinkedIn" },
-    { icon: Mail,     href: "mailto:harshitamulani2005@gmail.com",    label: "Email"    },
+    { icon: Mail, href: "mailto:harshitamulani2005@gmail.com", label: "Email" },
   ];
   return (
     <div className="fixed right-6 top-1/2 z-40 hidden -translate-y-1/2 flex-col gap-3 lg:flex">
@@ -20,7 +20,8 @@ export function SocialSidebar() {
           <Icon size={16} />
         </a>
       ))}
-      <div className="mx-auto mt-1 h-16 w-px"
+      <div
+        className="mx-auto mt-1 h-16 w-px"
         style={{ background: "linear-gradient(to bottom, var(--border-color), transparent)" }}
       />
     </div>

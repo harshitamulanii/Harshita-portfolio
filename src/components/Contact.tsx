@@ -3,10 +3,18 @@ import { motion } from "framer-motion";
 import { SectionHeader } from "./SectionHeader";
 
 const items = [
-  { Icon: Mail,     label: "harshitamulani2005@gmail.com",     href: "mailto:harshitamulani2005@gmail.com" },
-  { Icon: Phone,    label: "+91-7987755286",                   href: "tel:+917987755286"                   },
-  { Icon: Linkedin, label: "linkedin.com/in/harshita-mulani-984077333",   href: "https://linkedin.com/in/harshita-mulani-984077333" },
-  { Icon: Github,   label: "github.com/harshitamulanii",        href: "https://github.com/harshitamulanii"   },
+  {
+    Icon: Mail,
+    label: "harshitamulani2005@gmail.com",
+    href: "mailto:harshitamulani2005@gmail.com",
+  },
+  { Icon: Phone, label: "+91-7987755286", href: "tel:+917987755286" },
+  {
+    Icon: Linkedin,
+    label: "linkedin.com/in/harshita-mulani-984077333",
+    href: "https://linkedin.com/in/harshita-mulani-984077333",
+  },
+  { Icon: Github, label: "github.com/harshitamulanii", href: "https://github.com/harshitamulanii" },
 ];
 
 export function Contact() {

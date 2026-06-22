@@ -2,9 +2,9 @@ import { Github, Linkedin, Mail } from "lucide-react";
 
 export function Footer() {
   const items = [
-    { Icon: Github,   href: "https://github.com/harshitamulanii"           },
-    { Icon: Linkedin, href: "https://linkedin.com/in/harshita-mulani-984077333"      },
-    { Icon: Mail,     href: "mailto:harshitamulani2005@gmail.com"         },
+    { Icon: Github, href: "https://github.com/harshitamulanii" },
+    { Icon: Linkedin, href: "https://linkedin.com/in/harshita-mulani-984077333" },
+    { Icon: Mail, href: "mailto:harshitamulani2005@gmail.com" },
   ];
   return (
     <footer className="relative z-10 border-t border-border-soft py-10">

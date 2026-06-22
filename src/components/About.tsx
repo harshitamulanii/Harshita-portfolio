@@ -2,20 +2,19 @@ import { motion } from "framer-motion";
 import { SectionHeader, revealProps } from "./SectionHeader";
 
 const info = [
-  { icon: "🎓", label: "Degree",    value: "B.Tech – CSE, SISTec Bhopal (2024–2028)"      },
-  { icon: "🏫", label: "School",    value: "St. Aloysius Sr. Sec. School (PCM, 2024)"      },
-  { icon: "📧", label: "Email",     value: "harshitamulani2005@gmail.com"                  },
-  { icon: "📞", label: "Phone",     value: "+91-7987755286"                                },
-  { icon: "🌐", label: "GitHub",    value: "https://github.com/harshitamulanii"                    },
-  { icon: "💼", label: "LinkedIn",  value: "https://linkedin.com/in/harshita-mulani-984077333"               },
-  { icon: "🗣️", label: "Languages", value: "English, Hindi"                               },
+  { icon: "🎓", label: "Degree", value: "B.Tech – CSE, SISTec Bhopal (2024–2028)" },
+  { icon: "🏫", label: "School", value: "St. Aloysius Sr. Sec. School (PCM, 2024)" },
+  { icon: "📧", label: "Email", value: "harshitamulani2005@gmail.com" },
+  { icon: "📞", label: "Phone", value: "+91-7987755286" },
+  { icon: "🌐", label: "GitHub", value: "https://github.com/harshitamulanii" },
+  { icon: "💼", label: "LinkedIn", value: "https://linkedin.com/in/harshita-mulani-984077333" },
+  { icon: "🗣️", label: "Languages", value: "English, Hindi" },
 ];
 
 export function About() {
   return (
     <section id="about" className="relative z-10 mx-auto max-w-7xl px-6 py-24">
       <div className="grid gap-12 md:grid-cols-2 md:items-start">
-
         <div>
           <SectionHeader title="About Me" center={false} />
           <motion.p {...revealProps} className="text-base leading-relaxed text-text-secondary">
@@ -35,14 +34,15 @@ export function About() {
               >
                 <span className="mt-0.5 text-xl">{i.icon}</span>
                 <div className="min-w-0 flex-1">
-                  <p className="text-[10px] uppercase tracking-widest text-text-secondary">{i.label}</p>
+                  <p className="text-[10px] uppercase tracking-widest text-text-secondary">
+                    {i.label}
+                  </p>
                   <p className="truncate font-medium text-text-primary">{i.value}</p>
                 </div>
               </li>
             ))}
           </ul>
         </motion.div>
-
       </div>
     </section>
   );

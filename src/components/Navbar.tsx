@@ -2,18 +2,24 @@ import { useEffect, useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
 
 const LINKS = [
-  { href: "#home",            label: "Home"            },
-  { href: "#about",           label: "About"           },
-  { href: "#skills",          label: "Skills"          },
-  { href: "#projects",        label: "Projects"        },
-  { href: "#extracurriculars",label: "Extracurriculars"},
-  { href: "#contact",         label: "Contact"         },
+  { href: "#home", label: "Home" },
+  { href: "#about", label: "About" },
+  { href: "#skills", label: "Skills" },
+  { href: "#projects", label: "Projects" },
+  { href: "#extracurriculars", label: "Extracurriculars" },
+  { href: "#contact", label: "Contact" },
 ];
 
-export function Navbar({ theme, onToggleTheme }: { theme: "dark" | "light"; onToggleTheme: () => void }) {
+export function Navbar({
+  theme,
+  onToggleTheme,
+}: {
+  theme: "dark" | "light";
+  onToggleTheme: () => void;
+}) {
   const [scrolled, setScrolled] = useState(false);
-  const [active, setActive]     = useState("home");
-  const [open, setOpen]         = useState(false);
+  const [active, setActive] = useState("home");
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
@@ -23,7 +29,10 @@ export function Navbar({ theme, onToggleTheme }: { theme: "dark" | "light"; onTo
         const el = document.getElementById(id);
         if (!el) continue;
         const rect = el.getBoundingClientRect();
-        if (rect.top <= 120 && rect.bottom >= 120) { setActive(id); break; }
+        if (rect.top <= 120 && rect.bottom >= 120) {
+          setActive(id);
+          break;
+        }
       }
     };
     window.addEventListener("scroll", onScroll);
@@ -34,9 +43,7 @@ export function Navbar({ theme, onToggleTheme }: { theme: "dark" | "light"; onTo
   return (
     <header
       className={`fixed top-0 z-50 w-full transition-all duration-300 ${
-        scrolled
-          ? "backdrop-blur-md bg-bg-secondary/70 border-b border-border-soft shadow-sm"
-          : ""
+        scrolled ? "backdrop-blur-md bg-bg-secondary/70 border-b border-border-soft shadow-sm" : ""
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">

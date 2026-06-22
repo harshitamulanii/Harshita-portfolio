@@ -2,10 +2,26 @@ import { motion } from "framer-motion";
 import { SectionHeader } from "./SectionHeader";
 
 const items = [
-  { icon: "🎤", title: "Event Hosting",       text: "Organized and hosted college events with effective audience engagement and coordination."         },
-  { icon: "🗣️", title: "Public Speaking",     text: "Strong public speaking and presentation skills through stage hosting and academic activities."    },
-  { icon: "🤝", title: "Samadhan",             text: "Participated in 'Samadhan,' collaborating in team-based problem-solving activities."             },
-  { icon: "🛠️", title: "Technical Workshops", text: "Active participant in technical workshops, presentations, and collaborative learning events."     },
+  {
+    icon: "🎤",
+    title: "Event Hosting",
+    text: "Organized and hosted college events with effective audience engagement and coordination.",
+  },
+  {
+    icon: "🗣️",
+    title: "Public Speaking",
+    text: "Strong public speaking and presentation skills through stage hosting and academic activities.",
+  },
+  {
+    icon: "🤝",
+    title: "Samadhan",
+    text: "Participated in 'Samadhan,' collaborating in team-based problem-solving activities.",
+  },
+  {
+    icon: "🛠️",
+    title: "Technical Workshops",
+    text: "Active participant in technical workshops, presentations, and collaborative learning events.",
+  },
 ];
 
 export function Extracurriculars() {
@@ -41,7 +57,9 @@ export function Extracurriculars() {
                   <div className="glass-card rounded-xl p-5">
                     <div className="flex items-center gap-3">
                       <span className="text-2xl">{it.icon}</span>
-                      <h3 className="font-display text-lg font-bold text-text-primary">{it.title}</h3>
+                      <h3 className="font-display text-lg font-bold text-text-primary">
+                        {it.title}
+                      </h3>
                     </div>
                     <p className="mt-2 text-sm text-text-secondary">{it.text}</p>
                   </div>

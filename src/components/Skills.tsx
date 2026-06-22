@@ -7,35 +7,36 @@ type Tab = "Languages" | "Tools & Platforms" | "Soft Skills";
 const ICON = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons";
 
 const languages = [
-  { name: "C",          icon: `${ICON}/c/c-original.svg`                     },
-  { name: "C++",        icon: `${ICON}/cplusplus/cplusplus-original.svg`      },
-  { name: "Java",       icon: `${ICON}/java/java-original.svg`                },
-  { name: "JavaScript", icon: `${ICON}/javascript/javascript-original.svg`    },
-  { name: "HTML5",      icon: `${ICON}/html5/html5-original.svg`              },
-  { name: "CSS3",       icon: `${ICON}/css3/css3-original.svg`                },
-  { name: "MySQL",      icon: `${ICON}/mysql/mysql-original.svg`              },
+  { name: "C", icon: `${ICON}/c/c-original.svg` },
+  { name: "C++", icon: `${ICON}/cplusplus/cplusplus-original.svg` },
+  { name: "Java", icon: `${ICON}/java/java-original.svg` },
+  { name: "JavaScript", icon: `${ICON}/javascript/javascript-original.svg` },
+  { name: "HTML5", icon: `${ICON}/html5/html5-original.svg` },
+  { name: "CSS3", icon: `${ICON}/css3/css3-original.svg` },
+  { name: "MySQL", icon: `${ICON}/mysql/mysql-original.svg` },
 ];
 
 const tools = [
   { name: "PowerPoint", icon: "📊" },
-  { name: "Word",       icon: "📝" },
-  { name: "VS Code",    icon: `${ICON}/vscode/vscode-original.svg`            },
-  { name: "Git",        icon: `${ICON}/git/git-original.svg`                  },
-  { name: "GitHub",     icon: `${ICON}/github/github-original.svg`            },
+  { name: "Word", icon: "📝" },
+  { name: "VS Code", icon: `${ICON}/vscode/vscode-original.svg` },
+  { name: "Git", icon: `${ICON}/git/git-original.svg` },
+  { name: "GitHub", icon: `${ICON}/github/github-original.svg` },
 ];
 
 const soft = [
   { name: "Effective Communication", icon: "💬" },
-  { name: "Problem Solving",         icon: "🧩" },
-  { name: "Team Collaboration",      icon: "🤝" },
-  { name: "Adaptability",            icon: "🌱" },
-  { name: "Attention to Detail",     icon: "🔍" },
+  { name: "Problem Solving", icon: "🧩" },
+  { name: "Team Collaboration", icon: "🤝" },
+  { name: "Adaptability", icon: "🌱" },
+  { name: "Attention to Detail", icon: "🔍" },
 ];
 
 function Badge({ icon, name }: { icon: string; name: string }) {
   const isImage = icon.startsWith("http");
   return (
-    <div className="inline-flex items-center gap-2 rounded-full border border-border-soft bg-bg-secondary px-4 py-2 shadow-sm transition hover:scale-105 hover:shadow-md"
+    <div
+      className="inline-flex items-center gap-2 rounded-full border border-border-soft bg-bg-secondary px-4 py-2 shadow-sm transition hover:scale-105 hover:shadow-md"
       style={{ borderColor: "var(--border-color)" }}
     >
       {isImage ? (
@@ -50,11 +51,14 @@ function Badge({ icon, name }: { icon: string; name: string }) {
 
 export function Skills() {
   const [tab, setTab] = useState<Tab>("Languages");
-  const tabs: Tab[]   = ["Languages", "Tools & Platforms", "Soft Skills"];
+  const tabs: Tab[] = ["Languages", "Tools & Platforms", "Soft Skills"];
 
   return (
     <section id="skills" className="relative z-10 mx-auto max-w-7xl px-6 py-24">
-      <SectionHeader title="Technical Skills" subtitle="My expertise across various technologies and tools" />
+      <SectionHeader
+        title="Technical Skills"
+        subtitle="My expertise across various technologies and tools"
+      />
 
       {/* Tab buttons */}
       <div className="mb-10 flex flex-wrap justify-center gap-2">
@@ -83,12 +87,16 @@ export function Skills() {
         >
           {tab === "Languages" && (
             <div className="flex flex-wrap justify-center gap-3">
-              {languages.map((s) => <Badge key={s.name} {...s} />)}
+              {languages.map((s) => (
+                <Badge key={s.name} {...s} />
+              ))}
             </div>
           )}
           {tab === "Tools & Platforms" && (
             <div className="flex flex-wrap justify-center gap-3">
-              {tools.map((s) => <Badge key={s.name} {...s} />)}
+              {tools.map((s) => (
+                <Badge key={s.name} {...s} />
+              ))}
             </div>
           )}
           {tab === "Soft Skills" && (

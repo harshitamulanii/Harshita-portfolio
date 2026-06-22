@@ -18,16 +18,10 @@ export function SectionHeader({
 }) {
   return (
     <motion.div {...reveal} className={center ? "mb-12 text-center" : "mb-12"}>
-      <h2 className="font-display text-3xl font-bold text-text-primary md:text-4xl">
-        {title}
-      </h2>
+      <h2 className="font-display text-3xl font-bold text-text-primary md:text-4xl">{title}</h2>
       {/* Arctic Dawn accent bar — gradient underline */}
-      <div
-        className={`mt-3 h-[3px] w-16 rounded-full bg-aurora ${center ? "mx-auto" : ""}`}
-      />
-      {subtitle && (
-        <p className="mt-4 text-text-secondary">{subtitle}</p>
-      )}
+      <div className={`mt-3 h-[3px] w-16 rounded-full bg-aurora ${center ? "mx-auto" : ""}`} />
+      {subtitle && <p className="mt-4 text-text-secondary">{subtitle}</p>}
     </motion.div>
   );
 }

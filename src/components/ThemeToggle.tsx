@@ -1,7 +1,13 @@
 import { Moon, Sun } from "lucide-react";
 import { motion } from "framer-motion";
 
-export function ThemeToggle({ theme, onToggle }: { theme: "dark" | "light"; onToggle: () => void }) {
+export function ThemeToggle({
+  theme,
+  onToggle,
+}: {
+  theme: "dark" | "light";
+  onToggle: () => void;
+}) {
   return (
     <button
       onClick={onToggle}
@@ -15,7 +21,11 @@ export function ThemeToggle({ theme, onToggle }: { theme: "dark" | "light"; onTo
         transition={{ duration: 0.5 }}
         className="inline-flex"
       >
-        {theme === "dark" ? <Sun size={18} className="text-accent-teal" /> : <Moon size={18} className="text-accent-pink" />}
+        {theme === "dark" ? (
+          <Sun size={18} className="text-accent-teal" />
+        ) : (
+          <Moon size={18} className="text-accent-pink" />
+        )}
       </motion.span>
     </button>
   );
