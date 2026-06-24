@@ -18,7 +18,7 @@ export function About() {
         <div>
           <SectionHeader title="About Me" center={false} />
           <motion.p {...revealProps} className="text-base leading-relaxed text-text-secondary">
-            I'm a first-year B.Tech Computer Science Engineering student at Sagar Institute of
+            I'm a B.Tech Computer Science Engineering student at Sagar Institute of
             Science &amp; Technology, Bhopal (2024–2028). I love building things — from banking
             management apps to AI-powered study assistants. I'm always eager to learn new
             technologies, collaborate on meaningful projects, and push my skills forward.
